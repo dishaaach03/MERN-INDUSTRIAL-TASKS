@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+             body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fafafa;
+            color: rgb(10, 10, 10); /* Set text color to white for contrast */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .form-container {
+            width: 500px;
+            margin: 0 auto;
+            background-image: linear-gradient(orange, pink); /* Gradient background applied to the form container */
+            border: 1px solid #0e0e0e;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Rest of your CSS styles... */
+        
+        /* Add styles for .form-group1 for the "Login to Ethnus Website" label */
+        .form-group1 label {
+            color: blue; /* Set text color to blue */
+            text-decoration: underline; /* Underline the text */
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            flex: 1;
+        }
+
+        input[type="text"] {
+            flex: 2;
+            padding: 10px;
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .poor-text {
+            color: red;
+            font-size: 0.9rem;
+        }
+
+        .submit-button {
+            background-color: #3897f0;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .select-width-400 {
+        width: 400px; /* Set the desired width here */
+    }
+ 
+    
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <div class="form-container">
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                <span class="poor-text">&nbsp;&nbsp;&nbsp;Poor</span>
+            </div>
+            <div class="form-group">
+                <label for="LasttName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <span class="poor-text">&nbsp;&nbsp;&nbsp;Poor</span>
+            </div>
+            <div class="form-group">
+                <label for="Email">Email:</label>
+                <input type="text" id="Email" name="Email" required>
+                <span class="poor-text">&nbsp;&nbsp;&nbsp;Poor</span>
+            </div>
+            <div class="form-group">
+                <label for="Password">Password:</label>
+                <input type="text" id="Password" name="password" required>
+                <span class="poor-text">&nbsp;&nbsp;&nbsp;Poor</span>
+            </div>
+            <div class="form-group">
+                <label for="Re Enter Password">Re Enter Password:</label>
+                <input type="text" id="Re Enter Password" name="Re Enter Password" required>
+                <span class="poor-text">&nbsp;&nbsp;&nbsp;Poor Or Missmatched</span>
+            </div>
+            <div class="form-group">
+                <label class="radio-label">Gender:</label>
+                <input type="radio" id="male" name="gender" class="radio-input" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" class="radio-input" value="female">
+                <label for="female">Female</label>
+            </div>
+            <div class="form-group">
+                <label for="Age">Age:</label>
+                <input type="text" id="Age" name="Age" required>
+                <span class="poor-text">&nbsp;&nbsp;&nbsp;Poor</span>
+            </div>
+            <div class="form-group">
+                <label for="Phone no">Phone no:</label>
+                <input type="text" id="Phone no" name="phone no" required>
+                <span class="poor-text">&nbsp;&nbsp;&nbsp;Poor</span>
+            </div>
+            <div class="form-group">
+                <label for="Address">Address:</label>
+                <textarea id="Address" name="Address" rows="4" cols="50"></textarea>
+
+                <span class="poor-text">Poor</span>
+            </div>
+            
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="country" class="select-width-400">
+                    <option value="" disabled selected>Select Your Country</option>
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="australia">Australia</option>
+                    <option value="india">India</option>
+                    <!-- Add more country options here -->
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label class="radio-label">Languages Known:</label>
+                <input type="radio" id="english" name="gender" class="radio-input" value="english">
+                <label for="English">English</label>
+                <input type="radio" id="Kannada" name="gender" class="radio-input" value="Kannada">
+                <label for="Kannada">Kannada</label>
+                <input type="radio" id="Hindi" name="gender" class="radio-input" value="Hindi">
+                <label for="Hindi">Hindi</label>
+                <input type="radio" id="Telugu" name="gender" class="radio-input" value="Telegu">
+                <label for="Telegu">Telegu</label>
+            </div>
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="declaration" name="declaration" required>
+                    Hereby I declare all the given details are true
+                </label>
+
+            </div>
+            <div class="form-group1">
+                <label>
+                    
+                    Login to Ethnus  Website
+                </label>
+
+            </div>
+
+            
+            
+
+            <button type="submit" class="submit-button" style="width: 100px;">Register</button>
+
+        </form>
+    </div>
+</body>
+</html>

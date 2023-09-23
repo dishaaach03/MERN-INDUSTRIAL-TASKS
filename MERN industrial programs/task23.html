@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date and Time Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #datetime {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Date and Time Display</h1>
+    <div id="datetime"></div>
+    <button onclick="showDate()">Show Date</button>
+    <button onclick="showTime()">Show Time</button>
+
+    <script>
+        // Function to update the date and time display
+        function updateDateTime() {
+            const datetimeElement = document.getElementById("datetime");
+            const now = new Date();
+            const dateTimeString = now.toLocaleString();
+            datetimeElement.textContent = `Current Date and Time: ${dateTimeString}`;
+        }
+
+        // Function to show the current date
+        function showDate() {
+            const datetimeElement = document.getElementById("datetime");
+            const now = new Date();
+            const dateString = now.toDateString();
+            datetimeElement.textContent = `Current Date: ${dateString}`;
+        }
+
+        // Function to show the current time
+        function showTime() {
+            const datetimeElement = document.getElementById("datetime");
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            datetimeElement.textContent = `Current Time: ${timeString}`;
+        }
+
+        // Initial update
+        updateDateTime();
+    </script>
+</body>
+</html>
+

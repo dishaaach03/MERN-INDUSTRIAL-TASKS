@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alphabetical String Sorter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #result {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alphabetical String Sorter</h1>
+    <form id="sortForm">
+        <label for="inputString">Enter a string:</label>
+        <input type="text" id="inputString" required>
+        <button type="submit">Sort Alphabetically</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        // JavaScript function to sort a string alphabetically
+        function sortStringAlphabetically(inputString) {
+            return inputString.split('').sort().join('');
+        }
+
+        // Event listener for form submission
+        const sortForm = document.getElementById("sortForm");
+        sortForm.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            const inputString = document.getElementById("inputString").value;
+            const sortedString = sortStringAlphabetically(inputString);
+            document.getElementById("result").textContent = `Sorted String: ${sortedString}`;
+        });
+    </script>
+</body>
+</html>
